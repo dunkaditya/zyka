@@ -6,7 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
 import Bottle from "@/components/Bottle";
-import Sun from "@/components/Sun";
+import Anise from "@/components/Anise";
 import SpinBadge from "@/components/SpinBadge";
 import Wave from "@/components/Wave";
 import Reveal from "@/components/Reveal";
@@ -31,10 +31,10 @@ export default function Home() {
       <Nav />
       <main>
         {/* ————— Hero ————— */}
-        <section className="relative overflow-hidden bg-turmeric">
-          <Sun
+        <section className="relative bg-turmeric">
+          <Anise
             spin
-            className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-turmeric-deep/60"
+            className="pointer-events-none absolute -top-24 right-6 hidden h-96 w-96 text-turmeric-deep/60 sm:block"
           />
           <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:pb-16 lg:pt-12">
             <div className="relative z-10">
@@ -116,12 +116,12 @@ export default function Home() {
             <Reveal>
               <p className="eyebrow text-palm">Why lassi</p>
               <h2 className="display mt-4 max-w-3xl text-[clamp(2.2rem,5vw,4rem)] text-masala">
-                Punjab was blending probiotic drinks{" "}
+                India was blending probiotic drinks{" "}
                 <span className="text-chili">3,000 years</span> before it was a
                 trend.
               </h2>
               <p className="mt-6 max-w-2xl text-lg text-masala-soft">
-                Lassi is yogurt, whisked. Born in Punjab around 1000 BC, poured
+                Lassi is yogurt, whisked. Born in India around 1000 BC, poured
                 after meals as a digestif, served in clay cups long before
                 anyone said &ldquo;gut health.&rdquo; Historians call it the
                 original smoothie. We just gave it a protein upgrade.
@@ -153,7 +153,7 @@ export default function Home() {
                     className={`sticker h-full rounded-3xl ${card.bg} ${card.text} p-8 shadow-[5px_5px_0_rgba(60,42,22,0.2)]`}
                     style={{ transform: `rotate(${(i - 1) * 1.2}deg)` }}
                   >
-                    <Sun className="h-8 w-8 opacity-80" />
+                    <Anise className="h-8 w-8 opacity-80" />
                     <h3 className="display mt-5 text-2xl">{card.title}</h3>
                     <p className="mt-3 leading-relaxed opacity-90">
                       {card.body}
@@ -189,9 +189,9 @@ export default function Home() {
 
         {/* ————— Story teaser ————— */}
         <section className="relative overflow-hidden bg-chili py-24 text-cream">
-          <Sun
+          <Anise
             spin
-            className="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 text-chili-deep/60"
+            className="pointer-events-none absolute bottom-8 left-8 hidden h-48 w-48 text-chili-deep/60 lg:block"
           />
           <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
             <Reveal>

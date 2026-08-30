@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Sun from "./Sun";
+import Anise from "./Anise";
 
 export default function Nav({ onCream = false }: { onCream?: boolean }) {
   return (
@@ -29,8 +29,8 @@ export default function Nav({ onCream = false }: { onCream?: boolean }) {
           className="flex flex-col items-center leading-none"
           aria-label="Zyka home"
         >
-          <span className="wordmark text-4xl text-chili sm:text-5xl">zyka</span>
-          <span className="devanagari mt-1 text-xs font-medium text-masala/70 sm:text-sm">
+          <span className="wordmark text-5xl text-chili sm:text-6xl">zyka</span>
+          <span className="devanagari mt-1.5 text-sm font-medium text-masala/70 sm:text-base">
             ज़ायका
           </span>
         </Link>
@@ -39,7 +39,7 @@ export default function Nav({ onCream = false }: { onCream?: boolean }) {
             href="/#find-us"
             className="eyebrow flex items-center gap-2 rounded-full bg-chili px-5 py-2.5 text-cream transition-transform hover:-translate-y-0.5"
           >
-            <Sun className="h-3.5 w-3.5" />
+            <Anise className="h-3.5 w-3.5" />
             Find us
           </Link>
         </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import Sun from "@/components/Sun";
+import Anise from "@/components/Anise";
 import Wave from "@/components/Wave";
 import Reveal from "@/components/Reveal";
 
@@ -72,7 +72,7 @@ export default function About() {
                 </p>
                 <p>
                   But you know what was already on the table? Lassi.
-                  Punjab&rsquo;s been drinking it for 3,000 years — yogurt,
+                  India&rsquo;s been drinking it for 3,000 years — yogurt,
                   whisked, alive with cultures, poured after meals as a
                   digestif. The original probiotic drink. It just never carried
                   serious protein.
@@ -118,7 +118,7 @@ export default function About() {
               ].map((item, i) => (
                 <Reveal key={item.title} delay={i * 120}>
                   <div>
-                    <Sun className="h-8 w-8 text-turmeric" />
+                    <Anise className="h-8 w-8 text-turmeric" />
                     <h2 className="display mt-4 text-2xl">{item.title}</h2>
                     <p className="mt-3 leading-relaxed text-cream/85">
                       {item.body}

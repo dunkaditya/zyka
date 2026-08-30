@@ -1,4 +1,5 @@
-export default function Sun({
+/* Star anise flower — spice-rack iconography that doubles as a starburst */
+export default function Anise({
   className = "",
   spin = false,
 }: {
@@ -12,18 +13,21 @@ export default function Sun({
       aria-hidden="true"
       fill="currentColor"
     >
-      <circle cx="50" cy="50" r="13" />
       {Array.from({ length: 8 }).map((_, i) => (
-        <rect
+        <ellipse
           key={i}
-          x="47.5"
-          y="8"
-          width="5"
-          height="16"
-          rx="2.5"
+          cx="50"
+          cy="26"
+          rx="10.5"
+          ry="15.5"
           transform={`rotate(${i * 45} 50 50)`}
         />
       ))}
+      <path
+        fillRule="evenodd"
+        d="M50 41.5 a8.5 8.5 0 1 0 0 17 a8.5 8.5 0 1 0 0 -17 Z M50 46 a4 4 0 1 1 0 8 a4 4 0 1 1 0 -8 Z"
+      />
+      <circle cx="50" cy="50" r="1.8" />
     </svg>
   );
 }

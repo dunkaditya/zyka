@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Sun from "./Sun";
+import Anise from "./Anise";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-8">
         <div className="flex flex-col gap-12 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <Sun className="h-10 w-10 text-chili" />
+            <Anise className="h-10 w-10 text-chili" />
             <p className="wordmark mt-3 text-6xl text-turmeric sm:text-7xl">
               zyka
             </p>
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-14 flex items-center gap-3 border-t border-cream/15 pt-6 text-xs text-cream/50">
-          <Sun className="h-4 w-4 text-turmeric" />
+          <Anise className="h-4 w-4 text-turmeric" />
           <p>
             © {new Date().getFullYear()} Zyka. These statements have not been
             evaluated by the FDA. This product is not intended to diagnose,

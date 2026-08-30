@@ -23,18 +23,20 @@ export default function SpinBadge({ className = "" }: { className?: string }) {
         </text>
       </g>
       <g fill="#fdf6e8" transform="translate(35 35) scale(0.5)">
-        <circle cx="50" cy="50" r="13" />
         {Array.from({ length: 8 }).map((_, i) => (
-          <rect
+          <ellipse
             key={i}
-            x="47.5"
-            y="8"
-            width="5"
-            height="16"
-            rx="2.5"
+            cx="50"
+            cy="28"
+            rx="9.5"
+            ry="14"
             transform={`rotate(${i * 45} 50 50)`}
           />
         ))}
+        <path
+          fillRule="evenodd"
+          d="M50 42 a8 8 0 1 0 0 16 a8 8 0 1 0 0 -16 Z M50 46 a4 4 0 1 1 0 8 a4 4 0 1 1 0 -8 Z"
+        />
       </g>
     </svg>
   );

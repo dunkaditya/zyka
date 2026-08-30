@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-8">
         <div className="flex flex-col gap-12 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="wordmark text-6xl text-turmeric sm:text-7xl">zaika</p>
+            <p className="wordmark text-6xl text-turmeric sm:text-7xl">zyka</p>
             <p className="eyebrow mt-4 text-cream/70">
               Protein, but make it lassi
             </p>
@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="mt-14 flex items-center gap-3 border-t border-cream/15 pt-6 text-xs text-cream/50">
           <Sun className="h-4 w-4 text-turmeric" />
           <p>
-            © {new Date().getFullYear()} Zaika. These statements have not been
+            © {new Date().getFullYear()} Zyka. These statements have not been
             evaluated by the FDA. This product is not intended to diagnose,
             treat, cure, or prevent any disease.
           </p>

@@ -12,9 +12,9 @@ export default function Nav({ onCream = false }: { onCream?: boolean }) {
         <Link
           href="/"
           className="wordmark text-3xl text-chili"
-          aria-label="Zaika home"
+          aria-label="Zyka home"
         >
-          zaika
+          zyka
         </Link>
         <div className="flex items-center gap-5 sm:gap-8">
           <Link

@@ -16,17 +16,17 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   metadataBase: new URL("https://drinkzyka.com"),
   title: {
-    default: "Zaika — Protein, but make it lassi",
-    template: "%s — Zaika",
+    default: "Zyka — Protein, but make it lassi",
+    template: "%s — Zyka",
   },
   description:
     "20g of complete protein and billions of live probiotic cultures in a real mango lassi. The 3,000-year-old drink, upgraded.",
   openGraph: {
-    title: "Zaika — Protein, but make it lassi",
+    title: "Zyka — Protein, but make it lassi",
     description:
       "20g of complete protein and billions of live probiotic cultures in a real mango lassi.",
     url: "https://drinkzyka.com",
-    siteName: "Zaika",
+    siteName: "Zyka",
     type: "website",
   },
 };

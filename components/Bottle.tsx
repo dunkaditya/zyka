@@ -4,7 +4,7 @@ export default function Bottle({ className = "" }: { className?: string }) {
       viewBox="0 0 200 340"
       className={className}
       role="img"
-      aria-label="Zaika mango lassi bottle"
+      aria-label="Zyka mango lassi bottle"
     >
       {/* cap */}
       <rect x="68" y="14" width="64" height="36" rx="10" fill="#23644b" />
@@ -48,7 +48,7 @@ export default function Bottle({ className = "" }: { className?: string }) {
           fontVariationSettings: "'SOFT' 100, 'WONK' 1",
         }}
       >
-        zaika
+        zyka
       </text>
       <text
         x="100"

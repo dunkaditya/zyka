@@ -2,7 +2,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
-import Bottle from "@/components/Bottle";
+import HeroBottle from "@/components/HeroBottle";
 import Sun from "@/components/Sun";
 import SpinBadge from "@/components/SpinBadge";
 import Wave from "@/components/Wave";
@@ -59,17 +59,15 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative mx-auto flex w-56 justify-center sm:w-64 lg:w-80">
-              <Bottle className="bob relative z-10 w-full drop-shadow-[0_24px_32px_rgba(60,42,22,0.25)]" />
-              <SpinBadge className="absolute -left-14 bottom-10 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-left-20 sm:h-32 sm:w-32" />
+            <div className="relative mx-auto w-full max-w-md">
+              <HeroBottle />
+              <SpinBadge className="absolute bottom-14 left-0 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-left-6 sm:h-32 sm:w-32" />
             </div>
           </div>
         </section>
 
-        {/* ————— Ticker across the seam ————— */}
-        <div className="relative z-20 -my-3 -rotate-1">
-          <Marquee />
-        </div>
+        {/* ————— Ticker ————— */}
+        <Marquee />
 
         {/* ————— Why lassi ————— */}
         <section id="why-lassi" className="bg-cream pt-24">
@@ -162,7 +160,7 @@ export default function Home() {
                 Two of them belonged to my parents.
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg text-cream/85">
-                Zaika started in Riya&rsquo;s family kitchen, with the drink her
+                Zyka started in Riya&rsquo;s family kitchen, with the drink her
                 parents already loved and the protein their diet was missing.
               </p>
               <Link
@@ -186,7 +184,7 @@ export default function Home() {
               <p className="mx-auto mt-5 max-w-xl text-lg text-masala-soft">
                 We&rsquo;re launching with major retailers first — no checkout
                 here yet, just shelves. Drop your email and we&rsquo;ll tell you
-                the moment Zaika lands nearby.
+                the moment Zyka lands nearby.
               </p>
             </Reveal>
             <Reveal delay={100}>

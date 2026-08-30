@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -9,7 +10,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Our story",
   description:
-    "Zaika started in Riya's family kitchen — with the drink her parents already loved and the protein their diet was missing.",
+    "Zyka started in Riya's family kitchen — with the drink her parents already loved and the protein their diet was missing.",
 };
 
 export default function About() {
@@ -32,33 +33,27 @@ export default function About() {
         <section className="bg-cream">
           <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-24 sm:px-8 lg:grid-cols-[2fr_3fr] lg:gap-16">
             <Reveal>
-              {/*
-                Family photo slot — drop the real photo at public/images/family.jpg
-                and swap this placeholder for:
-                <img src="/images/family.jpg" alt="Riya with her parents" ... />
-              */}
               <figure
                 className="sticker overflow-hidden rounded-3xl bg-turmeric shadow-[6px_6px_0_rgba(60,42,22,0.2)]"
                 style={{ transform: "rotate(-1.5deg)" }}
               >
-                <div className="flex aspect-[4/5] flex-col items-center justify-center gap-4 p-8 text-center">
-                  <Sun className="h-14 w-14 text-chili" />
-                  <p className="display text-2xl text-masala">
-                    Riya, Mom &amp; Dad
-                  </p>
-                  <p className="eyebrow text-masala/60">
-                    Family photo coming soon
-                  </p>
-                </div>
+                <Image
+                  src="/images/family.jpg"
+                  alt="Riya with her mom and dad"
+                  width={1106}
+                  height={1400}
+                  priority
+                  className="w-full object-cover"
+                />
                 <figcaption className="bg-chili px-6 py-4 text-center font-bold text-cream">
-                  The reason Zaika exists
+                  The reason Zyka exists
                 </figcaption>
               </figure>
             </Reveal>
             <Reveal delay={120}>
               <div className="space-y-6 text-lg leading-relaxed text-masala">
                 <p className="display text-2xl text-masala sm:text-3xl">
-                  Hi, I&rsquo;m Riya. Zaika started at my parents&rsquo; dinner
+                  Hi, I&rsquo;m Riya. Zyka started at my parents&rsquo; dinner
                   table.
                 </p>
                 <p>
@@ -84,13 +79,13 @@ export default function About() {
                 </p>
                 <p>
                   So I stopped trying to change what my parents ate and
-                  upgraded it instead. Zaika is the mango lassi they already
+                  upgraded it instead. Zyka is the mango lassi they already
                   loved — real Alphonso mango, real live cultures — now with
                   20g of complete protein in every bottle. My dad drinks it
                   without being reminded. That&rsquo;s the whole quality bar.
                 </p>
                 <p>
-                  <em>Zaika</em> means flavor, by the way. Taste was never
+                  <em>Zyka</em> means flavor, by the way. Taste was never
                   optional.
                 </p>
                 <p className="wordmark text-3xl text-chili">— Riya</p>

@@ -1,3 +1,6 @@
+import { existsSync } from "fs";
+import { join } from "path";
+import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -19,6 +22,10 @@ const STATS = [
 const RETAILERS = ["Whole Foods", "Sprouts", "Target", "Costco", "H-E-B"];
 
 export default function Home() {
+  // Real packshot photo takes over the hero the moment it lands here
+  const hasPackshot = existsSync(
+    join(process.cwd(), "public/images/bottle.png")
+  );
   return (
     <>
       <Nav />
@@ -59,8 +66,23 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative mx-auto flex w-60 justify-center sm:w-72 lg:w-80">
-              <Bottle className="bob relative z-10 w-full drop-shadow-[0_28px_28px_rgba(60,42,22,0.28)]" />
+            <div
+              className={`relative mx-auto flex justify-center ${
+                hasPackshot ? "w-full max-w-lg" : "w-60 sm:w-72 lg:w-80"
+              }`}
+            >
+              {hasPackshot ? (
+                <Image
+                  src="/images/bottle.png"
+                  alt="Zyka mango lassi bottle with fresh mango"
+                  width={1024}
+                  height={1024}
+                  priority
+                  className="bob relative z-10 w-full rounded-3xl"
+                />
+              ) : (
+                <Bottle className="bob relative z-10 w-full drop-shadow-[0_28px_28px_rgba(60,42,22,0.28)]" />
+              )}
               <SpinBadge className="absolute -left-12 bottom-16 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-left-16 sm:h-32 sm:w-32" />
             </div>
           </div>

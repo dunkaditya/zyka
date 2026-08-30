@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     url: "https://drinkzyka.com",
     siteName: "Zyka",
     type: "website",
+    images: [{ url: "/images/bottle.jpg", width: 960, height: 1200 }],
   },
 };
 

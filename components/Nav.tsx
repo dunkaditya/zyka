@@ -3,22 +3,16 @@ import Sun from "./Sun";
 
 export default function Nav({ onCream = false }: { onCream?: boolean }) {
   return (
-    <header
-      className={`sticky top-0 z-50 ${
-        onCream ? "bg-cream/90" : "bg-turmeric/90"
-      } backdrop-blur-sm`}
-    >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link
-          href="/"
-          className="flex flex-col items-center leading-none"
-          aria-label="Zyka home"
-        >
-          <span className="wordmark text-3xl text-chili">zyka</span>
-          <span className="devanagari text-[11px] font-medium text-masala/70">
-            ज़ायका
-          </span>
-        </Link>
+    <header className={onCream ? "bg-cream" : "bg-turmeric"}>
+      <Link
+        href="/#find-us"
+        className="block bg-chili px-4 py-2.5 text-center text-cream transition-colors hover:bg-chili-deep"
+      >
+        <span className="eyebrow">
+          First sips land soon — get on the list&nbsp;→
+        </span>
+      </Link>
+      <nav className="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center px-5 py-5 sm:px-8">
         <div className="flex items-center gap-5 sm:gap-8">
           <Link
             href="/#why-lassi"
@@ -26,12 +20,21 @@ export default function Nav({ onCream = false }: { onCream?: boolean }) {
           >
             Why lassi
           </Link>
-          <Link
-            href="/about"
-            className="eyebrow text-masala hover:text-chili"
-          >
+          <Link href="/about" className="eyebrow text-masala hover:text-chili">
             Our story
           </Link>
+        </div>
+        <Link
+          href="/"
+          className="flex flex-col items-center leading-none"
+          aria-label="Zyka home"
+        >
+          <span className="wordmark text-4xl text-chili sm:text-5xl">zyka</span>
+          <span className="devanagari mt-1 text-xs font-medium text-masala/70 sm:text-sm">
+            ज़ायका
+          </span>
+        </Link>
+        <div className="flex justify-end">
           <Link
             href="/#find-us"
             className="eyebrow flex items-center gap-2 rounded-full bg-chili px-5 py-2.5 text-cream transition-transform hover:-translate-y-0.5"

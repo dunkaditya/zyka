@@ -14,14 +14,15 @@ export default function EmailForm() {
   }
 
   return (
-    <form
-      className="flex w-full max-w-md flex-col gap-3 sm:flex-row"
-      onSubmit={(e) => {
-        e.preventDefault();
-        // TODO: wire to email provider (Resend/Klaviyo) before launch
-        setDone(true);
-      }}
-    >
+    <div className="flex w-full max-w-md flex-col items-center gap-3">
+      <form
+        className="flex w-full flex-col gap-3 sm:flex-row"
+        onSubmit={(e) => {
+          e.preventDefault();
+          // TODO: wire to email provider (Resend/Klaviyo) before launch
+          setDone(true);
+        }}
+      >
       <label htmlFor="email" className="sr-only">
         Email address
       </label>
@@ -32,12 +33,16 @@ export default function EmailForm() {
         placeholder="you@email.com"
         className="w-full rounded-full border-2 border-masala/20 bg-white px-6 py-3.5 text-masala placeholder:text-masala-soft/60 focus:border-chili focus:outline-none"
       />
-      <button
-        type="submit"
-        className="shrink-0 rounded-full bg-chili px-8 py-3.5 font-bold text-cream transition-transform hover:-translate-y-0.5"
-      >
-        Keep me posted
-      </button>
-    </form>
+        <button
+          type="submit"
+          className="shrink-0 rounded-full bg-chili px-8 py-3.5 font-bold text-cream transition-transform hover:-translate-y-0.5"
+        >
+          Keep me posted
+        </button>
+      </form>
+      <p className="text-sm text-masala-soft/70">
+        No spam — just first sips and store drops.
+      </p>
+    </div>
   );
 }

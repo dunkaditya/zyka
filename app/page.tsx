@@ -36,7 +36,7 @@ export default function Home() {
             spin
             className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-turmeric-deep/60"
           />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-14 pt-14 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:pb-20 lg:pt-20">
+          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:pb-16 lg:pt-12">
             <div className="relative z-10">
               <p className="eyebrow rise rise-1 text-chili">
                 The original smoothie, upgraded
@@ -68,14 +68,14 @@ export default function Home() {
             </div>
             <div
               className={`relative mx-auto flex justify-center ${
-                hasPackshot ? "w-full max-w-lg" : "w-60 sm:w-72 lg:w-80"
+                hasPackshot ? "w-full max-w-[22rem] lg:max-w-[24rem]" : "w-60 sm:w-72 lg:w-80"
               }`}
             >
               {hasPackshot ? (
                 <Image
                   src="/images/bottle.jpg"
-                  alt="Zyka mango lassi bottle with fresh mango"
-                  width={1200}
+                  alt="Zyka mango lassi bottle on a grocery shelf"
+                  width={960}
                   height={1200}
                   priority
                   className="bob relative z-10 w-full rounded-3xl shadow-[8px_8px_0_rgba(60,42,22,0.2)]"
@@ -83,7 +83,7 @@ export default function Home() {
               ) : (
                 <Bottle className="bob relative z-10 w-full drop-shadow-[0_28px_28px_rgba(60,42,22,0.28)]" />
               )}
-              <SpinBadge className="absolute -left-12 bottom-16 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-left-16 sm:h-32 sm:w-32" />
+              <SpinBadge className="absolute -bottom-5 -left-5 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-bottom-7 sm:-left-8 sm:h-32 sm:w-32" />
             </div>
           </div>
         </section>

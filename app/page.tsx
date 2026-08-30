@@ -24,7 +24,7 @@ const RETAILERS = ["Whole Foods", "Sprouts", "Target", "Costco", "H-E-B"];
 export default function Home() {
   // Real packshot photo takes over the hero the moment it lands here
   const hasPackshot = existsSync(
-    join(process.cwd(), "public/images/bottle.png")
+    join(process.cwd(), "public/images/bottle.jpg")
   );
   return (
     <>
@@ -73,12 +73,12 @@ export default function Home() {
             >
               {hasPackshot ? (
                 <Image
-                  src="/images/bottle.png"
+                  src="/images/bottle.jpg"
                   alt="Zyka mango lassi bottle with fresh mango"
-                  width={1024}
-                  height={1024}
+                  width={1200}
+                  height={1200}
                   priority
-                  className="bob relative z-10 w-full rounded-3xl"
+                  className="bob relative z-10 w-full rounded-3xl shadow-[8px_8px_0_rgba(60,42,22,0.2)]"
                 />
               ) : (
                 <Bottle className="bob relative z-10 w-full drop-shadow-[0_28px_28px_rgba(60,42,22,0.28)]" />

@@ -36,12 +36,12 @@ export default function Home() {
             spin
             className="pointer-events-none absolute -top-24 right-6 hidden h-96 w-96 text-turmeric-deep/60 sm:block"
           />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:pb-16 lg:pt-12">
+          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-5 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:pb-14 lg:pt-6">
             <div className="relative z-10">
               <p className="eyebrow rise rise-1 text-chili">
                 The original smoothie, upgraded
               </p>
-              <h1 className="display rise rise-2 mt-5 text-[clamp(3.2rem,9vw,7.5rem)] text-masala">
+              <h1 className="display rise rise-2 mt-4 text-[clamp(2.8rem,7.5vw,6.25rem)] text-masala">
                 Protein,
                 <br />
                 but make it{" "}

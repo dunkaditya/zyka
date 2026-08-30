@@ -7,7 +7,11 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-8">
         <div className="flex flex-col gap-12 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="wordmark text-6xl text-turmeric sm:text-7xl">zyka</p>
+            <Sun className="h-10 w-10 text-chili" />
+            <p className="wordmark mt-3 text-6xl text-turmeric sm:text-7xl">
+              zyka
+            </p>
+            <p className="devanagari mt-2 text-2xl text-cream/80">ज़ायका</p>
             <p className="eyebrow mt-4 text-cream/70">
               Protein, but make it lassi
             </p>

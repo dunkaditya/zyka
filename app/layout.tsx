@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
-import { Fraunces, Archivo } from "next/font/google";
+import {
+  Young_Serif,
+  Bricolage_Grotesque,
+  Noto_Serif_Devanagari,
+} from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const youngSerif = Young_Serif({
   subsets: ["latin"],
-  axes: ["SOFT", "WONK", "opsz"],
-  variable: "--font-fraunces",
+  weight: "400",
+  variable: "--font-young",
 });
 
-const archivo = Archivo({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-archivo",
+  variable: "--font-bricolage",
+});
+
+const devanagari = Noto_Serif_Devanagari({
+  subsets: ["devanagari"],
+  variable: "--font-devanagari",
 });
 
 export const metadata: Metadata = {
@@ -38,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${archivo.variable}`}>
+      <body
+        className={`${youngSerif.variable} ${bricolage.variable} ${devanagari.variable}`}
+      >
         {children}
       </body>
     </html>

@@ -1,28 +1,60 @@
+/* Flat packshot-style bottle, Koia-inspired: ribbed cap, square shoulders,
+   full-wrap label — arch mark, wordmark + Devanagari, flavor band, badges. */
+
+const BADGES: [string, string][] = [
+  ["LIVE", "CULTURES"],
+  ["REAL", "MANGO"],
+  ["NO ADDED", "JUNK"],
+];
+
 export default function Bottle({ className = "" }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 200 340"
+      viewBox="0 0 280 600"
       className={className}
       role="img"
       aria-label="Zyka mango lassi bottle"
     >
       {/* cap */}
-      <rect x="68" y="14" width="64" height="36" rx="10" fill="#23644b" />
-      <rect x="68" y="38" width="64" height="6" fill="#1b503b" />
-      {/* neck ring */}
-      <rect x="72" y="52" width="56" height="10" rx="5" fill="#f3e2bd" />
-      {/* body */}
+      <rect x="100" y="8" width="80" height="46" rx="8" fill="#f7f1e3" />
+      {Array.from({ length: 9 }).map((_, i) => (
+        <rect
+          key={i}
+          x={106 + i * 8.5}
+          y="12"
+          width="2.5"
+          height="38"
+          rx="1.25"
+          fill="#e2d7bd"
+        />
+      ))}
+      <rect x="96" y="54" width="88" height="10" rx="5" fill="#ece2ca" />
+
+      {/* bottle body — mango liquid showing above the label */}
       <path
-        d="M78 62 C78 76 38 82 38 116 L38 296 Q38 326 70 326 L130 326 Q162 326 162 296 L162 116 C162 82 122 76 122 62 Z"
+        d="M112 64
+           L168 64
+           C176 96 236 104 242 148
+           L242 534
+           Q242 562 214 562
+           L66 562
+           Q38 562 38 534
+           L38 148
+           C44 104 104 96 112 64 Z"
         fill="#f6c75e"
       />
-      {/* lassi swirl highlight */}
+      {/* wrap label */}
       <path
-        d="M52 116 C52 96 78 88 84 76 L92 76 C86 94 62 100 62 118 L62 300 Q62 310 72 312 L64 312 Q52 310 52 298 Z"
-        fill="#fbd98a"
+        d="M38 168 L242 168 L242 534 Q242 562 214 562 L66 562 Q38 562 38 534 Z"
+        fill="#fdf6e8"
       />
-      {/* sun mark */}
-      <g fill="#c33764" transform="translate(86 88) scale(0.28)">
+
+      {/* arch mark */}
+      <path
+        d="M108 262 L108 216 Q108 182 140 182 Q172 182 172 216 L172 262 Z"
+        fill="#c33764"
+      />
+      <g fill="#fdf6e8" transform="translate(125 207) scale(0.3)">
         <circle cx="50" cy="50" r="13" />
         {Array.from({ length: 8 }).map((_, i) => (
           <rect
@@ -36,34 +68,108 @@ export default function Bottle({ className = "" }: { className?: string }) {
           />
         ))}
       </g>
-      {/* label */}
-      <rect x="50" y="140" width="100" height="98" rx="20" fill="#c33764" />
+
+      {/* wordmark + Devanagari */}
       <text
-        x="100"
-        y="192"
+        x="140"
+        y="320"
         textAnchor="middle"
-        fill="#fdf6e8"
-        style={{
-          font: "900 40px var(--font-fraunces), serif",
-          fontVariationSettings: "'SOFT' 100, 'WONK' 1",
-        }}
+        fill="#c33764"
+        style={{ font: "400 58px var(--font-young), Georgia, serif" }}
       >
         zyka
       </text>
       <text
-        x="100"
-        y="218"
+        x="140"
+        y="352"
+        textAnchor="middle"
+        fill="#6d573a"
+        style={{ font: "500 22px var(--font-devanagari), serif" }}
+      >
+        ज़ायका
+      </text>
+
+      {/* flavor band */}
+      <rect x="38" y="372" width="204" height="92" fill="#c33764" />
+      <rect x="38" y="378" width="204" height="2" fill="#fdf6e8" opacity="0.7" />
+      <rect x="38" y="456" width="204" height="2" fill="#fdf6e8" opacity="0.7" />
+      <text
+        x="140"
+        y="420"
         textAnchor="middle"
         fill="#fdf6e8"
         style={{
-          font: "700 11px var(--font-archivo), sans-serif",
+          font: "800 34px var(--font-bricolage), sans-serif",
+          letterSpacing: "0.14em",
+        }}
+      >
+        MANGO
+      </text>
+      <text
+        x="140"
+        y="446"
+        textAnchor="middle"
+        fill="#f6c75e"
+        style={{
+          font: "700 15px var(--font-bricolage), sans-serif",
+          letterSpacing: "0.22em",
+        }}
+      >
+        20G PROTEIN
+      </text>
+
+      {/* badge circles */}
+      {BADGES.map(([top, bottom], i) => (
+        <g key={top} transform={`translate(${74 + i * 66} 496)`}>
+          <circle r="26" fill="none" stroke="#c33764" strokeWidth="2" />
+          <text
+            y="-2"
+            textAnchor="middle"
+            fill="#c33764"
+            style={{
+              font: "800 8px var(--font-bricolage), sans-serif",
+                          }}
+          >
+            {top}
+          </text>
+          <text
+            y="9"
+            textAnchor="middle"
+            fill="#c33764"
+            style={{
+              font: "800 8px var(--font-bricolage), sans-serif",
+                          }}
+          >
+            {bottom}
+          </text>
+        </g>
+      ))}
+
+      {/* fine print */}
+      <text
+        x="140"
+        y="546"
+        textAnchor="middle"
+        fill="#6d573a"
+        style={{
+          font: "700 10px var(--font-bricolage), sans-serif",
           letterSpacing: "0.18em",
         }}
       >
-        MANGO · 20G
+        PROTEIN LASSI · 12 FL OZ
       </text>
-      {/* base shadow line */}
-      <rect x="56" y="314" width="88" height="4" rx="2" fill="#e0ae45" />
+
+      {/* flat shading — right shadow, left highlight */}
+      <path
+        d="M214 96 C230 110 240 128 242 148 L242 534 Q242 562 214 562 L196 562 C222 560 226 542 226 520 L226 150 C224 126 218 108 206 94 Z"
+        fill="#3c2a16"
+        opacity="0.06"
+      />
+      <path
+        d="M66 100 C52 112 44 130 40 150 L40 480 L52 480 L52 152 C56 130 62 114 74 100 Z"
+        fill="#ffffff"
+        opacity="0.35"
+      />
     </svg>
   );
 }

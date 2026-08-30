@@ -2,7 +2,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
-import HeroBottle from "@/components/HeroBottle";
+import Bottle from "@/components/Bottle";
 import Sun from "@/components/Sun";
 import SpinBadge from "@/components/SpinBadge";
 import Wave from "@/components/Wave";
@@ -59,15 +59,34 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative mx-auto w-full max-w-md">
-              <HeroBottle />
-              <SpinBadge className="absolute bottom-14 left-0 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-left-6 sm:h-32 sm:w-32" />
+            <div className="relative mx-auto flex w-60 justify-center sm:w-72 lg:w-80">
+              <Bottle className="bob relative z-10 w-full drop-shadow-[0_28px_28px_rgba(60,42,22,0.28)]" />
+              <SpinBadge className="absolute -left-12 bottom-16 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-left-16 sm:h-32 sm:w-32" />
             </div>
           </div>
         </section>
 
         {/* ————— Ticker ————— */}
         <Marquee />
+
+        {/* ————— The name ————— */}
+        <section className="bg-masala py-24 text-center text-cream">
+          <div className="mx-auto max-w-3xl px-5 sm:px-8">
+            <Reveal>
+              <p className="devanagari text-[clamp(3.5rem,9vw,6.5rem)] leading-tight text-turmeric">
+                ज़ायका
+              </p>
+              <p className="eyebrow mt-4 text-chili">
+                zyka · noun · flavor
+              </p>
+              <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-cream/85">
+                We&rsquo;re named after the one thing protein drinks never have
+                enough of. If it doesn&rsquo;t taste like the real thing, the
+                grams don&rsquo;t matter.
+              </p>
+            </Reveal>
+          </div>
+        </section>
 
         {/* ————— Why lassi ————— */}
         <section id="why-lassi" className="bg-cream pt-24">
@@ -135,7 +154,7 @@ export default function Home() {
               {STATS.map((stat, i) => (
                 <Reveal key={stat.big} delay={i * 100}>
                   <div style={{ transform: `rotate(${stat.tilt})` }}>
-                    <p className="display text-[clamp(2.6rem,6vw,4.5rem)] text-turmeric">
+                    <p className="display text-[clamp(2.2rem,4vw,3.4rem)] text-turmeric">
                       {stat.big}
                     </p>
                     <p className="eyebrow mt-2 text-cream/80">{stat.small}</p>

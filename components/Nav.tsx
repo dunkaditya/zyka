@@ -11,10 +11,13 @@ export default function Nav({ onCream = false }: { onCream?: boolean }) {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <Link
           href="/"
-          className="wordmark text-3xl text-chili"
+          className="flex flex-col items-center leading-none"
           aria-label="Zyka home"
         >
-          zyka
+          <span className="wordmark text-3xl text-chili">zyka</span>
+          <span className="devanagari text-[11px] font-medium text-masala/70">
+            ज़ायका
+          </span>
         </Link>
         <div className="flex items-center gap-5 sm:gap-8">
           <Link

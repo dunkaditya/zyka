@@ -85,8 +85,8 @@ export default function About() {
                   without being reminded. That&rsquo;s the whole quality bar.
                 </p>
                 <p>
-                  <em>Zyka</em> means flavor, by the way. Taste was never
-                  optional.
+                  <em>Zyka</em> — <span className="devanagari">ज़ायका</span> —
+                  means flavor, by the way. Taste was never optional.
                 </p>
                 <p className="wordmark text-3xl text-chili">— Riya</p>
               </div>

@@ -25,8 +25,8 @@
   --color-palm-deep: var(--palm-deep);
   --color-masala: var(--masala);
   --color-masala-soft: var(--masala-soft);
-  --font-display: var(--font-fraunces);
-  --font-body: var(--font-archivo);
+  --font-display: var(--font-young);
+  --font-body: var(--font-bricolage);
 }
 
 html {
@@ -37,7 +37,7 @@ body {
   overflow-x: clip;
   background: var(--cream);
   color: var(--masala);
-  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-family: var(--font-bricolage), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -46,24 +46,26 @@ body {
   color: var(--cream);
 }
 
-/* Display type — Fraunces, soft + wonky like the wordmark */
+/* Display type — Young Serif, the brand serif */
 .display {
-  font-family: var(--font-fraunces), serif;
-  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
-  font-weight: 640;
-  letter-spacing: -0.015em;
-  line-height: 0.98;
+  font-family: var(--font-young), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
 }
 
 .wordmark {
-  font-family: var(--font-fraunces), serif;
-  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
-  font-weight: 900;
-  letter-spacing: -0.01em;
+  font-family: var(--font-young), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.devanagari {
+  font-family: var(--font-devanagari), serif;
 }
 
 .eyebrow {
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-bricolage), sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.28em;

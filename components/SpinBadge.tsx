@@ -11,7 +11,7 @@ export default function SpinBadge({ className = "" }: { className?: string }) {
       <g className="sun-spin" style={{ transformOrigin: "60px 60px" }}>
         <text
           fill="#fdf6e8"
-          style={{ font: "700 13px var(--font-archivo), sans-serif" }}
+          style={{ font: "700 13px var(--font-bricolage), sans-serif" }}
         >
           <textPath
             href="#badge-circle"

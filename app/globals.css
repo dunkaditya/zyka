@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Zaika brand — "12A: Turmeric × Chili" */
+  --turmeric: #eaa83c;
+  --turmeric-deep: #d9962a;
+  --turmeric-dark: #c4841f;
+  --chili: #c33764;
+  --chili-deep: #a52a51;
+  --cream: #fdf6e8;
+  --palm: #2e7d5f;
+  --palm-deep: #23644b;
+  --masala: #3c2a16;
+  --masala-soft: #6d573a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-turmeric: var(--turmeric);
+  --color-turmeric-deep: var(--turmeric-deep);
+  --color-turmeric-dark: var(--turmeric-dark);
+  --color-chili: var(--chili);
+  --color-chili-deep: var(--chili-deep);
+  --color-cream: var(--cream);
+  --color-palm: var(--palm);
+  --color-palm-deep: var(--palm-deep);
+  --color-masala: var(--masala);
+  --color-masala-soft: var(--masala-soft);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-archivo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+  background: var(--cream);
+  color: var(--masala);
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--chili);
+  color: var(--cream);
+}
+
+/* Display type — Fraunces, soft + wonky like the wordmark */
+.display {
+  font-family: var(--font-fraunces), serif;
+  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+  font-weight: 640;
+  letter-spacing: -0.015em;
+  line-height: 0.98;
+}
+
+.wordmark {
+  font-family: var(--font-fraunces), serif;
+  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-archivo), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+}
+
+/* Marquee ticker */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+/* Slow sun rotation */
+@keyframes sunspin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.sun-spin {
+  animation: sunspin 40s linear infinite;
+  transform-origin: center;
+}
+
+/* Gentle bottle float */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.bob {
+  animation: bob 5.5s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero load-in stagger */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.rise {
+  opacity: 0;
+  animation: riseIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.18s; }
+.rise-3 { animation-delay: 0.31s; }
+.rise-4 { animation-delay: 0.44s; }
+
+/* Sticker tilt */
+.sticker {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.sticker:hover {
+  transform: rotate(0deg) scale(1.04) !important;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--chili);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .sun-spin,
+  .bob {
+    animation: none;
+  }
+  .rise {
+    animation: none;
+    opacity: 1;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

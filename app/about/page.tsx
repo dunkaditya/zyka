@@ -19,7 +19,7 @@ export default function About() {
       <Nav onCream />
       <main>
         {/* ————— Hero ————— */}
-        <section className="bg-cream pb-16 pt-16 sm:pt-24">
+        <section className="bg-cream pb-10 pt-10 sm:pb-16 sm:pt-24">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <p className="eyebrow rise rise-1 text-chili">Our story</p>
             <h1 className="display rise rise-2 mt-5 max-w-4xl text-[clamp(2.6rem,7vw,5.5rem)] text-masala">
@@ -31,7 +31,7 @@ export default function About() {
 
         {/* ————— Photo + letter ————— */}
         <section className="bg-cream">
-          <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-24 sm:px-8 lg:grid-cols-[2fr_3fr] lg:gap-16">
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-16 sm:gap-12 sm:px-8 sm:pb-24 lg:grid-cols-[2fr_3fr] lg:gap-16">
             <Reveal>
               <figure
                 className="sticker overflow-hidden rounded-3xl bg-turmeric shadow-[6px_6px_0_rgba(60,42,22,0.2)]"
@@ -96,7 +96,7 @@ export default function About() {
         </section>
 
         {/* ————— What we believe ————— */}
-        <section className="bg-palm pb-24 pt-6 text-cream">
+        <section className="bg-palm pb-16 pt-6 text-cream sm:pb-24">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <Reveal>
               <p className="eyebrow text-turmeric">What we believe</p>
@@ -131,7 +131,7 @@ export default function About() {
         </section>
 
         {/* ————— CTA ————— */}
-        <section className="bg-turmeric py-24 text-center">
+        <section className="bg-turmeric py-16 text-center sm:py-24">
           <div className="mx-auto max-w-3xl px-5 sm:px-8">
             <Reveal>
               <h2 className="display text-[clamp(2.2rem,5vw,4rem)] text-masala">

@@ -83,7 +83,7 @@ export default function Home() {
               ) : (
                 <Bottle className="bob relative z-10 w-full drop-shadow-[0_28px_28px_rgba(60,42,22,0.28)]" />
               )}
-              <SpinBadge className="absolute -bottom-5 -left-5 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-bottom-7 sm:-left-8 sm:h-32 sm:w-32" />
+              <SpinBadge className="absolute -bottom-4 -left-1 z-20 h-28 w-28 drop-shadow-[3px_3px_0_rgba(60,42,22,0.3)] sm:-bottom-7 sm:-left-8 sm:h-32 sm:w-32" />
             </div>
           </div>
         </section>
@@ -92,7 +92,7 @@ export default function Home() {
         <Marquee />
 
         {/* ————— The name ————— */}
-        <section className="bg-masala py-24 text-center text-cream">
+        <section className="bg-masala py-16 text-center text-cream sm:py-24">
           <div className="mx-auto max-w-3xl px-5 sm:px-8">
             <Reveal>
               <p className="devanagari text-[clamp(3.5rem,9vw,6.5rem)] leading-tight text-turmeric">
@@ -111,7 +111,7 @@ export default function Home() {
         </section>
 
         {/* ————— Why lassi ————— */}
-        <section id="why-lassi" className="bg-cream pt-24">
+        <section id="why-lassi" className="bg-cream pt-16 sm:pt-24">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <Reveal>
               <p className="eyebrow text-palm">Why lassi</p>
@@ -127,7 +127,7 @@ export default function Home() {
                 original smoothie. We just gave it a protein upgrade.
               </p>
             </Reveal>
-            <div className="mt-14 grid gap-6 sm:grid-cols-3">
+            <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-3">
               {[
                 {
                   title: "Cultured, actually",
@@ -163,11 +163,11 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <Wave fill="var(--palm)" className="mt-20" />
+          <Wave fill="var(--palm)" className="mt-14 sm:mt-20" />
         </section>
 
         {/* ————— Stats band ————— */}
-        <section className="bg-palm pb-20 pt-8 text-cream">
+        <section className="bg-palm pb-14 pt-8 text-cream sm:pb-20">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <Reveal>
               <p className="eyebrow text-turmeric">On the label</p>
@@ -188,7 +188,7 @@ export default function Home() {
         </section>
 
         {/* ————— Story teaser ————— */}
-        <section className="relative overflow-hidden bg-chili py-24 text-cream">
+        <section className="relative overflow-hidden bg-chili py-16 text-cream sm:py-24">
           <Anise
             spin
             className="pointer-events-none absolute bottom-8 left-8 hidden h-48 w-48 text-chili-deep/60 lg:block"
@@ -215,7 +215,7 @@ export default function Home() {
         </section>
 
         {/* ————— Find us ————— */}
-        <section id="find-us" className="bg-cream py-24">
+        <section id="find-us" className="bg-cream py-16 sm:py-24">
           <div className="mx-auto max-w-6xl px-5 text-center sm:px-8">
             <Reveal>
               <p className="eyebrow text-chili">Find us</p>
